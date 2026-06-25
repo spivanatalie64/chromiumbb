@@ -1,0 +1,11 @@
+src/
+depot_tools/
+out/
+dist/
+*.swp
+*.swo
+*~
+.DS_Store
+__pycache__/
+*.pyc
+.chromiumbb-combined.gn
