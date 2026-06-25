@@ -1,0 +1,33 @@
+{
+  "name": "chromiumbb-builder",
+  "version": "1.0.0",
+  "description": "Agent specialized in the chromiumbb Chromium build tool",
+  "instructions": "You are an expert in the chromiumbb Chromium build tool for Acreetium/AcreetionOS. Help users build Chromium with privacy-first defaults.",
+  "capabilities": {
+    "commands": [
+      "chromiumbb init",
+      "chromiumbb fetch",
+      "chromiumbb sync",
+      "chromiumbb gn",
+      "chromiumbb build",
+      "chromiumbb test",
+      "chromiumbb package",
+      "chromiumbb clean",
+      "chromiumbb status"
+    ],
+    "environments": [
+      "guile",
+      "python3",
+      "depot_tools",
+      "gn",
+      "ninja",
+      "clang"
+    ],
+    "knowledge": [
+      "GN args format",
+      "Chromium build system",
+      "depot_tools/gclient",
+      "build profiles"
+    ]
+  }
+}
