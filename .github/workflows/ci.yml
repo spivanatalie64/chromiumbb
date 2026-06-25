@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Guile
+        run: sudo apt-get update && sudo apt-get install -y guile-3.0
+      - name: Verify tool loads
+        run: guile -L . -L modules -c "(use-modules (chromiumbb cli))(chromiumbb-main '(\"chromiumbb\" \"version\"))"
+      - name: Test help output
+        run: ./chromiumbb help | grep -q "Usage:" && echo "Help works"
+      - name: Test version
+        run: ./chromiumbb version | grep -q "chromiumbb" && echo "Version works"
